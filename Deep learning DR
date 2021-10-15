@@ -1,0 +1,13 @@
+from keras.layers import Dense,Input,Dropout
+from keras.models import Model
+from matplotlib import pyplot as plt
+from sklearn.neural_network import MLPClassifier as ANN
+
+# USING FUNCTIONAL API MODEL
+ncol = train.shape[1]
+input_dim = Input(shape = (ncol, ))
+encoding_dim = 50
+encoded = Dense(500, activation = )(input_dim)
+encoded = Dropout(0.5)(encoded) #DROUPOUT
+encoded = Dense(100, activation = )(encoded)
+encoded = Dense(, activation = 'relu')(encoded) 
